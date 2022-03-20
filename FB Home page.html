@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            FaceBook home page
+        </title>
+        <script src="https://kit.fontawesome.com/adf61475a2.js" crossorigin="anonymous"></script>
+        <style>
+            .navbar{
+                height: 60px;
+                width: 100%px;
+                display: flex;
+                background-color: #ffffff;
+                box-shadow:0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+            }
+            .fb_body{
+                /* border: 2px solid blue; */
+                height: 500px;
+                width: 100%;
+            }
+            .left_section{
+                /* border: 2px solid rgb(158, 27, 184); */
+                height: 500px;
+                width: 350px;
+
+            }
+            .mid_section{
+                /* border: 2px solid green; */
+                height: 500px;
+                width: 650px;
+                background-color:#e4e6eb ;
+            }
+            .right_section{
+                /* border: 2px solid red; */
+                height: 500px;
+                width: 350px;
+                background-color: #e4e6eb;
+            }
+            .top_items{
+                height: 250px;
+                width: 100%;
+                /* border: 1px solid red; */
+
+            }
+            .down_items{
+                height: 230px;
+                width: 100%;
+                /* border: 2px solid olivedrab; */
+            }
+            .story{
+                height: 200px;
+                width: 650px;
+                /* border: 1px solid red; */
+            }
+            .status{
+                height: 100px;
+                /* width: 650px; */
+                /* border: 1px solid blue; */
+                margin-top: 10px;
+                background-color: white;
+                box-shadow:0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+
+            }
+            .room{
+                height: 60px;
+                /* width: 650px; */
+                /* border: 1px solid green; */
+                margin-top: 15px;
+                background-color: white;
+                box-shadow:0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+            }
+            .post{
+                height: 130px;
+                /* width: 650px; */
+                /* border: 1px solid purple; */
+            }
+            #fb_icon{
+                font-size: 40px;
+                padding: 8px 5px 5px 15px;
+                color: #0c86ee;
+            }
+            .search {
+                padding: 8px 5px 5px 10px;
+                /* border-radius: 20px; */
+                height: 24px;
+                margin: 10px 5px 28px 5px;
+                background-color: #f0f2f5;
+                color:#b0b3b8 ;
+                display: flex;
+            }
+
+            #fb_search {
+                height: 20px;
+                background-color: #f0f2f5;
+                /* border: none; */
+                width: 200px;
+
+            }
+            #fb_search:focus{
+                outline: none;
+            }
+            .icons {
+                display: flex;
+                padding: 15px 5px 5px 20px;
+                font-size:25px ;
+            }
+            .nav-item {
+                /* margin-left: 10px; */
+                width: 80px;
+                padding-left: 40px;
+                padding-top: 5px;
+                margin-right: 30px;
+                
+            }
+            .nav-item:hover{
+                background-color: #f0f2f5;
+                /* width: 80px;
+                padding-left: 44px; */
+                border-radius: 7px;
+            }
+            .nav-item:active{
+                background-color: blue;
+                color: blue;
+                width: 5000px;
+            }
+            
+            .name {
+                height: 40px;
+                /* border: 1px solid white; */
+                margin: 8px 5px 7px 50px;
+                border-radius: 14px;
+                display: flex;
+                padding: 2px;
+                padding-right: 10px;
+                
+            }
+            .name:hover{
+                background-color: #b3b5b8;
+            }
+            .button {
+                height: 22px;
+                width: 85px;
+                color: #3a3b3c;
+                border: none;
+                border-radius: 8px;
+                margin-left: 5px;
+                margin-bottom: 45px;    
+            }
+            
+            .options {
+                display: flex;
+                font-size: 20px;
+                 
+            }
+            .menu {
+                height: 25px;
+                width: 25px;
+                margin:7px 0 0 10px ;
+                background-color: #e4e6eb;
+                border-radius: 50%;
+                padding: 8px;
+                
+            }
+            .icon-item {
+                margin: 3px 0 0 3px;
+            }
+            .first {
+                border: none solid #f0f2f5;
+                background-color: #e4e6eb;
+                /* padding: 8px 3px 20px 10px; */
+                width: 100%;
+                height: 37px;
+                
+            }
+            .first:hover{
+                background-color: hsl(214deg 9% 68%);
+            }
+            .top {
+                border: none;
+                padding: 5px 40px 5px 10px;
+                margin-bottom: 120px;
+                font-size: 14px;
+            }
+
+            .game, .down {
+                border: none solid #f0f2f5;
+                background-color: #e4e6eb;
+                width: 100%;
+                height: 36px;
+                
+            }
+            .game:hover{
+                background-color: hsl(214deg 9% 68%) ;
+            }
+            .contact {
+                height: 25px;
+                width: 100%;
+                background-color:#e4e6eb;
+                font-size: 18px;
+                color: #6d6f73;
+                padding: 10px 0 0 2px;
+                
+            }
+            .contacts {
+                background-color: #e4e6eb;
+                font-size: 18px;
+                padding: 10px 10px 10px 10px;
+                height: 15px;
+                width: 100%;
+                font-family: inherit;
+            }
+            .contacts:hover{
+                background-color:  hsl(214deg 9% 68%);
+            }
+            .whats_on {
+                height: 30px;
+                width: 570px;
+                border-radius: 50px;
+                /* border: 1px solid #f0f2f5; */
+                background-color: #f0f2f5;
+                font-size: 15px;
+                margin: 5px 10px 5px 5px ;
+            }
+            .whats_on:hover{
+                background-color:  hsl(214deg 9% 68%);
+            }
+            .whats_on_focus{
+                outline: none;
+            }
+            .photo {
+                height: 36px;
+                width: 36px;
+                border-radius: 50%;
+                margin: 5px 10px 5px 14px;
+            }
+            #post_icons {
+                height: 25px;
+                width: 300px;
+                /* border: 1px solid blue; */
+                font-size: 16px;
+                color: #65676b;
+                /* font-family: inherit; */
+                margin-left: 35px;
+                
+            }
+            #post_icons:hover{
+                background-color:#f0f2f5;
+                height: 30px;
+                border-radius: 8px;
+
+            }
+            #room_creat {
+                /* border: 1px solid #e7f3ff; */
+                height: 34px;
+                width: 120px;
+                border-radius: 16px;
+                margin: 12px 0px 5px 18px;
+            }
+            #room_creat:hover{
+                background-color:#f0f2f5;
+            }
+            #day {
+                font-size: 35px;
+                margin-left: 10px;
+                color: blue ;
+            }
+            .story_picture {
+                position: relative;
+                height: 190px;
+                width: 120px;
+                /* border: 1px solid blue; */
+                margin: 4px 5px 0 4px;
+                border-radius: 15px;
+                
+            }
+            .profile_pic {
+                position: absolute;
+                height: 30px;
+                width: 40px;
+                /* border: 1px solid blue; */
+                top: 10px;
+                left: 10px;
+                border-radius: 50%;
+            }
+            .post_content {
+                width: 550px;
+                /* border: 1px  solid black; */
+                margin-left: 50px;
+            }
+
+            
+        </style>
+    </head>
+    <body>
+        <div class="navbar">
+            <i class="fa-brands fa-facebook" id="fb_icon"></i>
+            <div class="search">
+                <i class="fa-brands fa-searchengin"></i>
+                <input id="fb_search" type="search" placeholder="Search Facebok"/>
+            </div>
+
+        <div class="icons">
+            <div class="nav-item">
+                <i class="fas fa-home-alt" style=" color: #6d6f73;"></i>
+            </div>
+
+            <div class="nav-item">
+                <i class="fas fa-tv-alt" style="color: #6d6f73;"></i>
+            </div>
+
+            <div class="nav-item">
+                <i class="fas fa-hotel" style="color:#6d6f73; ;"></i>
+            </div>
+
+            <div class="nav-item">
+                <i class="fas fa-users" style="color: #6d6f73;"></i>
+            </div>
+        </div>
+
+        <div class="name">
+            <img src="https://lh3.googleusercontent.com/ogw/ADea4I7eUqKycaqqIzAS6G1seReFdBK__9hDdZ4Bev_s_g=s32-c-mo" style="border-radius: 50%;"/>
+            <p style="font-size: 18px; margin-top: 7px;"><b> &nbsp Ananna Rani</b></p>
+        </div>
+        <div class="options">
+            <div class= "menu" >
+                <i class="fas fa-border-none icon-item"></i>
+            </div>
+
+            <div class="menu">
+                <i class="fab fa-facebook-messenger icon-item"></i>
+            </div>
+
+            <div class="menu">
+                <i class="fas fa-bell icon-item"></i>
+            </div>
+
+            <div class="menu">
+                <i class="fas fa-caret-down icon-item"></i>
+            </div>
+            
+        </div>   
+
+        </div>
+        <div class="fb_body" style="display: flex;">
+            <div class="left_section">
+                <div class="top_items">
+                    <div class="first">
+                        <img src="https://lh3.googleusercontent.com/ogw/ADea4I7eUqKycaqqIzAS6G1seReFdBK__9hDdZ4Bev_s_g=s32-c-mo" style="border-radius: 50%;"/>
+                        <p style="display: inline;"> Ananna Rani Barai</p>
+                    </div>
+                
+                
+                    <div class="first">
+                        <i class="fas fa-user-friends" style="color:#6595c9;"></i>
+                        <p style="display: inline;">Friends</p>
+                    </div>
+                
+                
+                    <div class="first">
+                        <i class="fas fa-users" style="color: #6595c9;"></i>
+                        <p style="display: inline;">Groups </p>
+                    </div>
+                
+                
+                    <div class="first">
+                        <i class="fas fa-hotel" style="color:#6595c9;"></i>
+                        <p style="display: inline;"> Marketplace</p>
+                    </div>
+                
+                
+                    <div class="first">
+                        <i class="fas fa-tv-alt" style="color: #6595c9;"></i>
+                        <p style="display: inline;">Watch</p>
+                    </div>
+                
+                
+                    <div class="first">
+                        <i class="fas fa-undo" style="color: #6595c9;"></i>
+                        <p style="display: inline;">Memories</p>
+                    </div>
+                
+                
+                    <div class="first">
+                        <i class="fas fa-caret-down icon-item" style="color: #6595c9;"></i>
+                        <p style="display: inline;">See more</p>
+                    </div>
+                
+                </div>
+                <hr/>
+                <div class="down_items">
+                    <div class="down">
+                        <p style=" margin-left: 10px; font-size: 16px; color: #6595c9;"> Your shortcuts</p>
+                    </div>
+
+                    <div class="game">
+                        <i class="fas fa-address-book" style="color: palevioletred;"></i>
+                        <p style="display: inline;">Name tests</p>
+                    </div>
+
+                    <div class="game">
+                        <i class="fas fa-dice-six" style="color: #6595c9;"></i>
+                        <p style="display: inline;">Ludu king</p>
+                    </div>
+
+                    <div class="game">
+                        <i class="fas fa-basketball-ball" style="color: orange;"></i>
+                        <p style="display: inline;">Basket ball</p>
+                    </div>
+
+                    <div class="game">
+                        <i class="fas fa-chess" style="color: #6d6f73;"></i>
+                        <p style="display: inline;">Chess</p>
+                    </div>
+
+                    <div class="game">
+                        <i class="fas fa-network-wired" style="color: green"></i>
+                        <p style="display: inline;">Networks</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mid_section">
+                <div class="story" style="display: flex;">
+                    <div class="story_picture">
+                        <img style="height: 190px; width: 120px; border-radius: 7px;" src="./ananna.jpg"/>
+                        <div class="profile_pic" > <img style="height: 30px; width: 40px; border-radius: 50%;" src="https://lh3.googleusercontent.com/ogw/ADea4I7eUqKycaqqIzAS6G1seReFdBK__9hDdZ4Bev_s_g=s32-c-mo"></div>
+                        <p style="position: absolute; bottom: 2px; left: 10px; color: white;">Abedasultana</p>
+
+                    </div>
+
+                    <div class="story_picture">
+                        <img style="height: 190px; width: 120px;" src="./ananna.jpg"/>
+                        <div class="profile_pic"> <img style="height: 30px; width: 40px; border-radius: 50%;" src="https://lh3.googleusercontent.com/ogw/ADea4I7eUqKycaqqIzAS6G1seReFdBK__9hDdZ4Bev_s_g=s32-c-mo"> </div>
+                        <p style="position: absolute; bottom: 2px; left: 10px; color: white;">Habibur</p>
+                    </div>
+                    
+                    <div class="story_picture">
+                        <img style="height: 190px; width: 120px;" src="./ananna.jpg"/>
+                        <div class="profile_pic"> <img style="height: 30px; width: 40px; border-radius: 50%;" src="https://lh3.googleusercontent.com/ogw/ADea4I7eUqKycaqqIzAS6G1seReFdBK__9hDdZ4Bev_s_g=s32-c-mo"> </div>
+                        <p style="position: absolute; bottom: 2px; left: 10px; color: white;">Tonmoy</p>
+                    </div>
+
+                    <div class="story_picture">
+                        <img style="height: 190px; width: 120px;" src="./ananna.jpg"/>
+                        <div class="profile_pic"> <img style="height: 30px; width: 40px; border-radius: 50%;" src="https://lh3.googleusercontent.com/ogw/ADea4I7eUqKycaqqIzAS6G1seReFdBK__9hDdZ4Bev_s_g=s32-c-mo"></div>
+                        <p style="position: absolute; bottom: 2px; left: 10px; color: white;">Israt liza</p>
+                    </div>
+
+                    <div class="story_picture">
+                        <img style="height: 190px; width: 120px;" src="./ananna.jpg"/>
+                        <div class="profile_pic"> <img style="height: 30px; width: 40px; border-radius: 50%;" src="https://lh3.googleusercontent.com/ogw/ADea4I7eUqKycaqqIzAS6G1seReFdBK__9hDdZ4Bev_s_g=s32-c-mo"> </div>
+                        <p style="position: absolute; bottom: 2px; left: 10px; color: white;">Ananna</p>
+                    </div>
+
+
+                    
+                </div>
+                <div class="post_content">
+                    <div class="status">
+                        <div style="display: flex;">
+                            <img class="photo" src="https://lh3.googleusercontent.com/ogw/ADea4I7eUqKycaqqIzAS6G1seReFdBK__9hDdZ4Bev_s_g=s32-c-mo"/>
+                            <input class="whats_on" type="text" placeholder="What's on your mind, Ananna rani?"/>
+                        </div>
+                        <hr/>
+                        <div style="display: flex;">
+                            <div id="post_icons">
+                                <i class="fas fa-video" style="color: red; font-size:22px;"></i>
+                                <p style="display: inline;"><b>Live video</b></p>
+                            </div>
+
+                            <div id="post_icons">
+                                <i class="fas fa-portrait" style="color: green; font-size: 22px;"></i>
+                                <p style="display: inline;"><b>Photo/video</b></p>
+                            </div>
+
+                            <div id="post_icons">
+                                <i class="fas fa-skating" style="color: yellowgreen; font-size: 22px;"></i>
+                                <p style="display: inline;"><b>Feelings/activity</b></p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="room" style="display: flex;">
+                        <div id="room_creat">
+                            <i class="fas fa-video" style="font-size: 18px; color: blueviolet; margin-top: 5px; margin-left: 6px;"></i>
+                            <p style="display: inline; color: blue; font-size: 16px; padding: 2px;"><b>Creat room</b></p>
+                        </div>
+                        <div style="display: flex;">
+                            <p><i class="fas fa-user-circle" id="day"></i></p>
+                            <p><i class="fas fa-user-circle" id="day"></i></p>
+                            <p><i class="fas fa-user-circle" id="day"></i></p>
+                            <p><i class="fas fa-user-circle" id="day"></i></p>
+                            <p><i class="fas fa-user-circle" id="day"></i></p>
+                            <p><i class="fas fa-user-circle" id="day"></i></p>
+                            <p><i class="fas fa-user-circle" id="day"></i></p>
+                            <p><i class="fas fa-user-circle" id="day"></i></p>
+                            <p><i class="fas fa-user-circle" id="day"></i></p>
+                        </div>
+
+                    </div>
+
+                    <div class="post"></div>
+                </div>
+            </div>
+            <div class="right_section">
+                <div>
+                    <div class="contact">
+                        <p style="display: inline; margin-left: 10px;">Contacts</p>
+                        <i class="fas fa-video" style="margin-left: 150px; font-size: 12px;" ></i>
+                        <i class="fas fa-search" style="margin-left: 20px; font-size: 12px;"></i>
+                        <i class="fas fa-ellipsis-h" style="margin-left: 20px; font-size: 12px;"></i>
+                        
+                    </div>
+
+                    <div class="contacts">
+                        <i class="far fa-user-circle" style="color: green;"></i>
+                        <p style="display: inline; margin-left: 8px;">Abcd</p>
+                    </div>
+
+                    <div class="contacts">
+                        <i class="far fa-user-circle" style="color: green;"></i>
+                        <p style="display: inline; margin-left: 8px;">Efgh</p>
+                    </div>
+
+                    <div class="contacts">
+                        <i class="far fa-user-circle" style="color: green;"></i>
+                        <p style="display: inline; margin-left: 8px;">Ijkl</p>
+                    </div>
+
+                    <div class="contacts">
+                        <i class="far fa-user-circle" style="color: green;"></i>
+                        <p style="display: inline; margin-left: 8px;">Mnop</p>
+                    </div>
+
+                    <div class="contacts">
+                        <i class="far fa-user-circle" style="color: green;"></i>
+                        <p style="display: inline; margin-left: 8px;">Qrst</p>
+                    </div>
+
+                    <div class="contacts">
+                        <i class="far fa-user-circle" style="color: green;"></i>
+                        <p style="display: inline; margin-left: 8px;">Uvwx</p>
+                    </div>
+
+                    <div class="contacts">
+                        <i class="far fa-user-circle" style="color: green;"></i>
+                        <p style="display: inline; margin-left: 8px;">Yz</p>
+                    </div>
+                    </div>
+
+        </div>
+
+
+
+
+
+
+    </body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+
+        </title>
+        <style>
+            .relative{
+                position: relative;
+                left: 100px;
+                border: 5px solid blue;
+                top: 20px;
+            }
+            .fixed{
+                position: fixed;
+                top: 0;
+                right: 0;
+            }
+            .parent{
+                position: relative;
+                height: 200px;
+                width: 400px;
+                border: 2px solid green;
+                top: 40px;
+                left: 50px;
+            }
+            .child{
+                border: 2px solid green;
+                height: 100px;
+                width: 200px;
+                position: absolute;
+                right: 2px;
+                bottom: 2px;
+            }
+            .sticky{
+                border: 5px solid gray;
+                background-color: blueviolet;
+                padding: 10px;
+                color: aliceblue;
+                position: sticky;
+                top: 0;
+
+            }
+        </style>
+    </head>
+    <body>
+        <div class="sticky">i am sticky</div>
+        <h1>position</h1> 
+       <ol>
+            <li> static</li>
+            <li>relative</li>
+            <li> fixed</li>
+            <li> absolute</li>
+            <li> sticky</li>
+       </ol>
+       <div class="relative">
+            this is relative position
+       </div>
+       <div class="fixed">
+            this is fixed position
+       </div>
+       <div class="parent">
+           this is relative position
+           <div class="child">
+            this is absolute position
+           </div>
+       </div>
+       <div style="padding-bottom:2000px">
+        <p>In this example, the sticky element sticks to the top of the page (top: 0), when you reach its scroll position.</p>
+        <p>Scroll back up to remove the stickyness.</p>
+        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae  voluptatibus.</p>
+        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+      </div>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+    </body>
+
+</html>
